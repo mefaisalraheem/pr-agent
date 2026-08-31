@@ -95,7 +95,8 @@ EXCLUDE_FILE_PATTERNS	Files to exclude from analysis	package-lock.json,*.min.js,
     ✅ Production Ready - Docker, logging, health checks, and more
 
 
-    graph TD
+    ```mermaid
+graph TD
     A[Developer Opens PR] --> B[GitHub Webhook]
     B --> C[FastAPI Endpoint]
     C --> D[Verify Signature]
@@ -106,6 +107,7 @@ EXCLUDE_FILE_PATTERNS	Files to exclude from analysis	package-lock.json,*.min.js,
     H --> I[Cache Result]
     I --> J[Post Comment + Labels]
     E -->|Cache Hit| J
+```
 
 
 
