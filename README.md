@@ -99,6 +99,9 @@ EXCLUDE_FILE_PATTERNS	Files to exclude from analysis	package-lock.json,*.min.js,
 
 
 
+````markdown
+## 🔄 How It Works
+
 ```mermaid
 flowchart TD
     A[Developer Opens PR] --> B[GitHub Webhook]
@@ -113,7 +116,6 @@ flowchart TD
     I --> J[Post Comment + Labels]
 
     E -->|Cache Hit| J
-```
 
     
 🧪 Testing
