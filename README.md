@@ -97,20 +97,23 @@ EXCLUDE_FILE_PATTERNS	Files to exclude from analysis	package-lock.json,*.min.js,
 
   
 
-  ```mermaid
-graph TD
+
+
+```mermaid
+flowchart TD
     A[Developer Opens PR] --> B[GitHub Webhook]
     B --> C[FastAPI Endpoint]
     C --> D[Verify Signature]
     D --> E[Check Cache]
+
     E -->|Cache Miss| F[Fetch PR Diff]
     F --> G[Smart Filtering]
     G --> H[OpenAI Analysis]
     H --> I[Cache Result]
     I --> J[Post Comment + Labels]
+
     E -->|Cache Hit| J
 ```
-
 
     
 🧪 Testing
